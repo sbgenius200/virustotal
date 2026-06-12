@@ -1,0 +1,4 @@
+# requirements.txt — install before running or building
+pyautogui
+Pillow
+requests
