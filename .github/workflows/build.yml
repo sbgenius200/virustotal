@@ -1,7 +1,7 @@
 name: Build Windows EXE
 
 on:
-  workflow_dispatch:  # manual trigger only
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyautogui Pillow requests pyinstaller
+          pip install mss Pillow requests pyinstaller
 
       - name: Build EXE with PyInstaller
         run: |
