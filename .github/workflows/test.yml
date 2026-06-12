@@ -1,0 +1,18 @@
+name: Test Run EXE
+
+on:
+  workflow_dispatch:  # manual trigger only
+
+jobs:
+  test-run:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run ExamMonitor.exe for 30 seconds
+        run: |
+          Start-Process -FilePath ".\ExamMonitor.exe" -PassThru
+          Start-Sleep -Seconds 30
+        shell: powershell
